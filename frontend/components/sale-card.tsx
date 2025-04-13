@@ -3,7 +3,7 @@ import { ListedNFT } from '@/interface/nft'
 import { IWeb3Context, useWeb3Context } from '@/context/web3Context';
 import useContract, { market } from '@/hooks/useReadContract';
 import React, { useRef, useState } from 'react'
-import { parseEther } from 'ethers';
+import { formatEther, parseEther } from 'ethers';
 
 
 export default function SaleCard({nft}:{nft:ListedNFT}) {
@@ -74,7 +74,7 @@ export default function SaleCard({nft}:{nft:ListedNFT}) {
                 </div>
             </div>
         {/*  */}
-        <div className=' h-[320px] max-w-[280px] flex flex-col p-2 border border-zinc-700 hover:shadow-md shadow-zinc-800 rounded-2xl bg-zinc-800'>
+        <div className=' h-[320px] md:max-w-[280px] flex flex-col p-2 border border-zinc-700 hover:shadow-md shadow-zinc-800 rounded-2xl bg-zinc-800'>
                   <div className='relative h-2/3 group '>
                     <div className='group-hover:opacity-100 opacity-0 transition-all delay-75 duration-200  absolute top-0 left-0 right-0 bottom-0 bg-black/20 z-10 flex justify-center items-center'>
                     <label htmlFor={nft?.tokenId?.toString()} className=" bg-[#6154f3] text-white rounded-xl px-4 py-2  ">Buy Now</label>
@@ -96,7 +96,7 @@ export default function SaleCard({nft}:{nft:ListedNFT}) {
                           </div>
                           <div className='flex space-y-0.5 items-end flex-col'>
                             <p className=' text-xs'>Price</p>
-                            <p className=''>{nft?.price} BC</p>
+                            <p className=''>{formatEther(nft?.price?.toString()!).slice(0, 6)}1 BC</p>
                           </div>
                       </div>
                   </div>

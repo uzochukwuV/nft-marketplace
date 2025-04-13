@@ -17,29 +17,34 @@ export default function Layout({
             <Web3ContextProvider>
                 <header className="">
                     <div id="nav" className=" flex justify-between px-16 py-4 mb-4 font-medium ">
-                        <div className=" flex gap-32  items-center">
-                            <div>
-                                Logo
+                        <div className=" md:flex md:gap-32  items-center w-full">
+                            <div className=" flex justify-between w-full">
+                                <div>
+                                    Logo
+                                </div>
+                                <div className=" flex gap-4 md:hidden items-center">
+                                    <ConnectButton />
+                                    </div>
                             </div>
-                            <div >
-                                <div className=" flex gap-4 items-center">
-                                    <SearchInput />
+                            <div className=" w-full">
+                                <div className=" flex gap-4 items-center md:text-xs">
+                                    {/* <SearchInput /> */}
                                     <div className=" rounded-2xl px-4 py-1 hover:bg-white/10 hover:backdrop-blur-3xl">
-                                        <Link href={"/market"} className=" hover:text-white" >Explore</Link>
+                                        <Link href={"/market"} className=" hover:text-white text-xs md:text-base" >Explore</Link>
                                     </div>
                                     <div className=" rounded-2xl px-4 py-1 hover:bg-white/10 hover:backdrop-blur-3xl">
-                                        <Link href={"/market/mint"} className=" hover:text-white" >Mint</Link>
+                                        <Link href={"/market/mint"} className=" hover:text-white text-xs md:text-base" >Mint</Link>
                                     </div>
                                     <div className=" rounded-2xl px-4 py-1 hover:bg-white/10 hover:backdrop-blur-3xl">
-                                        <Link href={"/market/assets"} className=" hover:text-white" >Your Assets</Link>
+                                        <Link href={"/market/assets"} className=" hover:text-white text-xs md:text-base" >Assets</Link>
                                     </div>
                                     <div className=" rounded-2xl px-4 py-1 hover:bg-white/10 hover:backdrop-blur-3xl">
-                                        <Link href={"/market/transactions"} className=" hover:text-white" >Transactions</Link>
+                                        <Link href={"/market/transactions"} className=" hover:text-white text-xs md:text-base" >Transactions</Link>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className=" flex gap-4 items-center">
+                        <div className="hidden md:flex gap-4 items-center">
                             <ConnectButton />
                         </div>
                     </div>

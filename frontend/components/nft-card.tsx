@@ -74,7 +74,7 @@ function NFTCard({ nft }: { nft: NFT }) {
                     </div>
                 </div>
             </div>
-            <div className=' h-[320px] max-w-[280px] flex flex-col p-2 border border-zinc-700 hover:shadow-md shadow-zinc-800 rounded-2xl bg-zinc-800'>
+            <div className=' h-[320px] md:max-w-[280px] flex flex-col p-2 border border-zinc-700 hover:shadow-md shadow-zinc-800 rounded-2xl bg-zinc-800'>
                 <div className='relative h-2/3 group '>
                     <div className='group-hover:opacity-100 opacity-0 transition-all delay-75 duration-200  absolute top-0 left-0 right-0 bottom-0 bg-black/20 z-10 flex justify-center items-center'>
                         <label htmlFor={nft?.tokenId?.toString()} className=" bg-[#6154f3] text-white rounded-xl px-4 py-2  ">List for sale</label>
@@ -107,7 +107,7 @@ function NFTCard({ nft }: { nft: NFT }) {
 
 export function NFTCardSeleton() {
     return (
-        <div className='h-[320px] max-w-[280px] flex flex-col p-2 border border-zinc-700 hover:shadow-md shadow-zinc-800 rounded-2xl bg-zinc-800 animate-pulse'>
+        <div className='h-[320px] md:max-w-[280px] flex flex-col p-2 border border-zinc-700 hover:shadow-md shadow-zinc-800 rounded-2xl bg-zinc-800 animate-pulse'>
             <div className='relative h-2/3 group bg-zinc-500 rounded-2xl'></div>
             <div className='flex-1 py-2 flex justify-between flex-col'>
                 <div className='px-2 h-3 bg-zinc-600  w-1/2 py-2 rounded-2xl'></div>

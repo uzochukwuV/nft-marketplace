@@ -1,9 +1,7 @@
 {
-  "/api/mint/route": "app/api/mint/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/market/assets/page": "app/market/assets/page.js",
   "/market/mint/page": "app/market/mint/page.js",
   "/market/page": "app/market/page.js",
-  "/market/transactions/page": "app/market/transactions/page.js",
   "/page": "app/page.js"
 }

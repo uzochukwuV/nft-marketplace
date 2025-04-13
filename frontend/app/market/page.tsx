@@ -6,9 +6,9 @@ import React from 'react'
 function Market() {
   return (
     <div className=' antialiased text-pretty px-12'>
-      <section className='relative  h-[90vh] rounded-3xl bg-black/20  '>
+      <section className='relative  md:h-[90vh] rounded-3xl bg-black/20  '>
         <div className=' absolute top-0 left-0 right-0 bottom-0 bg-zinc-900 rounded-3xl  '></div>
-        <div className=' relative h-full w-full p-16 flex gap-6 z-10'>
+        <div className=' relative h-full w-full md:p-16 p-4 md:flex gap-6 z-10'>
           <div className=' flex-1 flex justify-end items-center '>
             <video src="/test2.mp4" muted autoPlay loop className=' object-cover h-full rounded-3xl'></video>
           </div>

@@ -76,6 +76,9 @@ function ListedAssets() {
                 <SaleCard key={nft?.tokenId} nft={nft} />
             )
          }
+         {
+            listedNfts?.length ==0 && <div>No Sales today Sorry</div>
+        }
       </section>
     </div>
   )

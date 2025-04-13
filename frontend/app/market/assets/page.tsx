@@ -84,6 +84,9 @@ function Assets() {
                 <NFTCard nft={nft} key={nft?.tokenId} />
             )
         }
+        {
+            nfts?.length ==0 && <div>No Assets</div>
+        }
     </div> 
     </section>
   )
