@@ -49,3 +49,7 @@ input[data-value="nft-card"]:checked + div{
     visibility: visible;
     opacity: 1;
 }
+
+.container3 {
+  background: url("./../public/bg.svg");
+}

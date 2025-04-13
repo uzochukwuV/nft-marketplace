@@ -26,22 +26,20 @@ function MintNFT() {
                 console.error("Failed to upload data")
             }
             const ipfsData = await response.json()
-            console.log(ipfsData) 
-            console.log(state.address)
-
             const transaction = await contract?.safeMint(state.address, ipfsData.jsonurl);
-            console.log(transaction)
-            e.currentTarget.reset()
+            await transaction.wait();
+            
+            setLoading(false)
         } catch (error) {
             console.error(error)
         } finally {
-            
             setLoading(false)
+           
         }
 
     }
     return (
-        <div className=' relative antialiased text-pretty px-12'>
+        <div className=' relative antialiased text-pretty px-4 md:px-12'>
             {
                 isLoading ? <div id='loading-spinner' className=' invisible opacity-0 absolute  top-0 z-10 left-0 right-0 bottom-0 '>
             
@@ -54,17 +52,17 @@ function MintNFT() {
 
             </div>
             }
-            <section className='relative py-16 h-[90vh] px-22 rounded-3xl bg-black/20 flex flex-col '>
-                <div className=''>
+            <section className='relative py-16 md:h-[90vh] md:px-22 px-6 rounded-3xl bg-black/20 flex flex-col '>
+                <div className='mb-6'>
                     <h1 className=' text-4xl font-semibold'>Create an nft</h1>
                     <p className=' text-slate-300'>Once your item is minted you will not be able to change any of its information.</p>
                 </div>
-                <form method='POST' onSubmit={handleSubmit} className=' flex-1 flex gap-16'>
-                    <div className="flex-1 h-full">
+                <form method='POST' onSubmit={handleSubmit} className=' flex-1 md:flex gap-16'>
+                    <div className="flex-1 md:h-full mb-4">
 
-                        <div className=' h-full w-full  flex items-center justify-center '>
+                        <div className=' md:h-full w-full  flex items-center justify-center '>
                             <div className="flex items-center  justify-center w-full ">
-                                <label htmlFor="dropzone-file" className="flex h-[400px] flex-col items-center justify-center w-full border-2 border-zinc-300 border-dashed rounded-lg cursor-pointer bg-zinc-50 dark:hover:bg-zinc-800 dark:bg-zinc-600 hover:bg-zinc-100 dark:border-zinc-600 dark:hover:border-zinc-500 dark:hover:bg-zinc-600">
+                                <label htmlFor="dropzone-file" className="flex md:h-[400px] flex-col items-center justify-center w-full border-2 border-zinc-300 border-dashed rounded-lg cursor-pointer bg-zinc-50 dark:hover:bg-zinc-800 dark:bg-zinc-600 hover:bg-zinc-100 dark:border-zinc-600 dark:hover:border-zinc-500 dark:hover:bg-zinc-600">
                                     <div className="flex flex-col items-center justify-center pt-5 pb-6">
                                         <svg className="w-8 h-8 mb-4 text-zinc-500 dark:text-zinc-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />

@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 export default function Home() {
   const navigate = useRouter()
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]  absolute top-0 left-0 right-0 bottom-0">
+    <div id="container" className=" container3 font-[family-name:var(--font-geist-sans)] absolute top-0 left-0 right-0 bottom-0">
       <header className="">
        
         <div id="nav" className=" flex justify-between px-16 py-4 font-medium ">

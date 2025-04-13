@@ -31,7 +31,7 @@ function NFTCard({ nft }: { nft: NFT }) {
 
         // e.currentTarget.reset()
     }
-
+    console.log(nft)
     return (
         <div>
 
@@ -51,9 +51,9 @@ function NFTCard({ nft }: { nft: NFT }) {
                             </div>
                             <div className=' h-1/2 my-2'>
                                 {
-                                    nft?.media_type == "image" ?
-                                        <img src="/test1.avif" alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
-                                        : <video src={nft?.image} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                                    nft?.media_type?.toLowerCase() == "image" ?
+                                        <img src={nft?.image_url} alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                                        : <video src={nft?.image_url} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
                                 }
                             </div>
                             <div>
@@ -80,12 +80,12 @@ function NFTCard({ nft }: { nft: NFT }) {
                         <label htmlFor={nft?.tokenId?.toString()} className=" bg-[#6154f3] text-white rounded-xl px-4 py-2  ">List for sale</label>
                     </div>
                     <div className='absolute top-4 right-4 rounded-2xl z-10 bg-black'>
-                        <p className=' text-xs font-semibold '>{nft?.owner}</p>
+                        <p className=' text-xs font-semibold '>{nft?.owner} </p>
                     </div>
                     {
-                        nft?.media_type == "image"?
-                        <img src="/test1.avif" alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
-                        : <video src={nft?.image} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                        nft?.media_type?.toLowerCase() == "image"?
+                        <img src={nft?.image_url} alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                        : <video src={nft?.image_url} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
                     }
                     </div>
                 <div className=' flex-1 py-2 space-y-1.5 '>

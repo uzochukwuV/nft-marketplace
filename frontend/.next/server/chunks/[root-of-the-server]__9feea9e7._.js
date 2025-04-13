@@ -99,6 +99,7 @@ async function POST(request) {
             image_url: url,
             logo: url,
             owner: data.get("owner")?.toString() || "",
+            media_type: data.get("mediaType")?.toString() || "image",
             attributes: [
                 {
                     trait_type: "owner",

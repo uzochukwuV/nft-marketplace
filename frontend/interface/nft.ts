@@ -3,7 +3,7 @@ export interface NFT {
     name?: string;
     description?: string;
     external_url?: string;
-    image?: string;
+    image_url?: string;
     logo?: string;
     attributes?: any[]; // You can define a more specific type if you know the structure
     owner?: string;
@@ -15,7 +15,7 @@ export interface NFT {
     name?: string;
     description?: string;
     external_url?: string;
-    image?: string;
+    image_url?: string;
     logo?: string;
     attributes?: any[]; // You can define a more specific type if you know the structure
     owner?: string;

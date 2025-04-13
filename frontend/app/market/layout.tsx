@@ -13,7 +13,7 @@ export default function Layout({
 }>) {
     return (
 
-        <div>
+        <div className=" container3">
             <Web3ContextProvider>
                 <header className="">
                     <div id="nav" className=" flex justify-between px-16 py-4 mb-4 font-medium ">

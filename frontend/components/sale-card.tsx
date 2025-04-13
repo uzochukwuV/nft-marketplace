@@ -51,9 +51,9 @@ export default function SaleCard({nft}:{nft:ListedNFT}) {
                             </div>
                             <div className=' h-1/2 my-2'>
                                 {
-                                    nft?.media_type == "image" ?
-                                        <img src="/test1.avif" alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
-                                        : <video src={nft?.image} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                                    nft?.media_type?.toLowerCase() == "image" ?
+                                        <img src={nft?.image_url} alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                                        : <video src={nft?.image_url} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
                                 }
                             </div>
                             <div>
@@ -80,9 +80,9 @@ export default function SaleCard({nft}:{nft:ListedNFT}) {
                     <label htmlFor={nft?.tokenId?.toString()} className=" bg-[#6154f3] text-white rounded-xl px-4 py-2  ">Buy Now</label>
                     </div>
                     {
-                        nft?.media_type == "image"?
-                        <img src="/test1.avif" alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
-                        : <video src={nft?.image} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                        nft?.media_type?.toLowerCase() == "image"?
+                        <img src={nft?.image_url} alt="" className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
+                        : <video src={nft?.image_url} className=' relative block h-full rounded-2xl  w-full object-cover aspect-square' />
                     }
                   </div>
                   <div className=' flex-1 py-2 flex justify-between  flex-col'>

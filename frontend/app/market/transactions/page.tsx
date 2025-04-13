@@ -3,7 +3,7 @@ import React from 'react'
 
 function Transactions() {
   return (
-    <div>
+    <div className='mx-16'>
         <UserTransacions />
     </div>
   )

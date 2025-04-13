@@ -135,7 +135,11 @@ event AssetPurchased(uint256 indexed id, uint128 price, address indexed seller, 
 ```
 
 ---
+contract address
 
+ Basecoin // 0xac0b398fb41a7a3ac789ec3f743d2f95574df4d3
+ Basenft  // 0xec7903f848e623eaa94c090747a7e6bcd3a77008
+ Basemarket  // 0xe48fad009f8fcef5995bf25946577531c33f0f04
 
 # 🌐 BaseMarket Frontend
 
