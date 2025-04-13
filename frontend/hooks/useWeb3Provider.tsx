@@ -78,7 +78,7 @@ const useWeb3Provider = () => {
     }, [connect, state.isAuthenticated]);
 
     useEffect(() => {
-        if (typeof window.ethereum === "undefined") return;
+        if (typeof window === "undefined") return;
     
         const handleAccountsChanged = (accounts: string[]) => {
             if (accounts.length > 0) {
